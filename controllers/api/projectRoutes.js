@@ -2,6 +2,21 @@ const router = require('express').Router();
 const { Project } = require('../../models');
 const withAuth = require('../../utils/auth');
 
+// router.get('/:id', async ((req,res)=> {
+
+//   const project = await Project.findByPk(req.params.id, {
+//     include: [
+//       //Comment,
+//       {
+//         model: User,
+//         attributes: ['name'],
+//       },
+//     ],
+//   });
+
+//   res.json(project)
+// }))
+
 router.post('/', withAuth, async (req, res) => {
   try {
     const newProject = await Project.create({

@@ -34,6 +34,9 @@ router.get('/project/:id', async (req, res) => {
   try {
     const projectData = await Project.findByPk(req.params.id, {
       include: [
+        // { model: Comment,
+        //   attributes: ['name']
+        // },
         {
           model: User,
           attributes: ['name'],
@@ -42,7 +45,7 @@ router.get('/project/:id', async (req, res) => {
     });
 
     const project = projectData.get({ plain: true });
-
+    console.log(project);
     res.render('project', {
       ...project,
       logged_in: req.session.logged_in,

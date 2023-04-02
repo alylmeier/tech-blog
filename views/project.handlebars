@@ -5,6 +5,17 @@
   <p>Created by {{user.name}} on {{format_date date_created}}</p>
  
   <p>
-    <button class="btn btn-primary">Fund this Project!</button>
+    
+    
+    <h3>Leave a Comment</h3>
+
+    <form class="form new-project-form">
+      <div class="form-group">
+        
+        <input class="form-input" type="text" id="comment-name" name="comment-name" />
+      </div>
+      <button class="btn btn-primary">Submit your Comment</button>
   </p>
+  <div id="comment-space"></div>
 </div>
+<script src="/js/comment.js"></script>
