@@ -73,15 +73,14 @@ router.get('/project/:id', async (req, res) => {
     res.status(500).json(err);
   }
 
-  // const comments = await Comment.findAll({
-  //   where : {
-  //     project_id: req.params.id
-  //   },
-  //   include: {{ model:User }
-  //   })
-  //   res.render('project')
-  // })
-});
+//   const comments = await Comment.findAll({
+//     where : {
+//       project_id: req.params.id
+//     },
+//     include
+//     }
+//   })
+ });
 
 // Use withAuth middleware to prevent access to route
 router.get('/profile', withAuth, async (req, res) => {
