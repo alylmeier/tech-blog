@@ -1,6 +1,28 @@
 const router = require('express').Router();
-const { Project, User } = require('../models');
+const { Project, User, Comment } = require('../models');
 const withAuth = require('../utils/auth');
+
+// router.get('/', async (req, res) =>{
+//   try {
+//     const commData = await Comment.findAll({
+//       include : [
+//         {
+//           model: Park,
+//           attributes: ['id'],
+
+//         },
+//       ],
+//     });
+//     const comments = commData.map((comment) => comment.get ({plain: true}));
+//     console.log(comments)
+//     res.render('project',{
+//       comments
+//     });
+//   } catch (err) {
+//     res.status(500).json(err);
+
+//   }
+// });
 
 router.get('/', async (req, res) => {
   try {
@@ -34,9 +56,6 @@ router.get('/project/:id', async (req, res) => {
   try {
     const projectData = await Project.findByPk(req.params.id, {
       include: [
-        // { model: Comment,
-        //   attributes: ['name']
-        // },
         {
           model: User,
           attributes: ['name'],
@@ -53,6 +72,15 @@ router.get('/project/:id', async (req, res) => {
   } catch (err) {
     res.status(500).json(err);
   }
+
+  // const comments = await Comment.findAll({
+  //   where : {
+  //     project_id: req.params.id
+  //   },
+  //   include: {{ model:User }
+  //   })
+  //   res.render('project')
+  // })
 });
 
 // Use withAuth middleware to prevent access to route

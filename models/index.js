@@ -15,6 +15,11 @@ Comment.belongsTo(Project, {
   foreignKey: 'project_id',
 });
 
+// Comment.belongsTo(User, {
+//   foreignKey: 'userId',
+//   onDelete: 'CASCADE'
+// }); 
+
 Project.hasMany(Comment, {
   foreignKey: 'project_id',
 });
