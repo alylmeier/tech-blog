@@ -1,4 +1,3 @@
-# tech-blog
 # The Tech Blog
 
 ## Description
@@ -18,4 +17,4 @@ This project is intended to be used by everyone who wants to participate in tech
 
 
 ## Screenshot
-
+![generatormockup](https://github.com/alylmeier/note-taker/blob/main/public/note%20taker%20ss.png)
