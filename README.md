@@ -17,4 +17,4 @@ This project is intended to be used by everyone who wants to participate in tech
 
 
 ## Screenshot
-![generatormockup](https://github.com/alylmeier/note-taker/blob/main/public/note%20taker%20ss.png)
+![generatormockup](https://github.com/alylmeier/tech-blog/blob/main/public/tech-blog-ss.png)
